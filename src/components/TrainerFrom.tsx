@@ -4,15 +4,17 @@ import type { ITrainer } from "../types/trainer.type";
 interface Props {
   getter: ITrainer[];
   setter: React.Dispatch<React.SetStateAction<ITrainer[]>>;
+  customTitle?: string;
 }
 
-const TrainerForm: React.FC<Props> = ({ getter, setter }) => {
+const TrainerForm: React.FC<Props> = ({ getter, setter, customTitle }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [trainerName, setTrainerName] = useState<string>("");
   const [trainerStarter, setTrainerStarter] = useState<string>("");
 
   return (
     <div>
+      <h2>{customTitle || "Trainer Form Component"}</h2>
       <button onClick={() => setIsOpen((v) => !v)}>
         {isOpen ? "Close Trainer Form" : "Open Trainer Form"}
       </button>
