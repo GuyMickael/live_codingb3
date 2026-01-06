@@ -25,7 +25,7 @@ export default function BaasicPokemonList() {
   return (
     <div>
       <h1>Basic Pokemon List</h1>
-      <ul>
+      <ul id="pokemon">
         {data.map((pokemon) => (
           <li key={pokemon.id + "_list"}>
             {pokemon.name.fr} (#{pokemon.pokedex_id})

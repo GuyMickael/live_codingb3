@@ -11,9 +11,6 @@ const TrainerSelector: React.FC<Props> = ({ arrayOfTrainers }) => {
   const [currentTrainer, setCurrentTrainer] = useState<ITrainer | null>(null);
 
   useEffect(() => {
-    if (currentTrainer === null) {
-      alert("Please select a trainer to proceed.");
-    }
   }, [arrayOfTrainers, currentTrainer]);
 
   const navStyle: React.CSSProperties = {
@@ -27,7 +24,7 @@ const TrainerSelector: React.FC<Props> = ({ arrayOfTrainers }) => {
     justifyContent: "space-between",
     padding: "0 16px",
     background: "#0f172a",
-    color: "white",
+    color: "gray",
     boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
     zIndex: 1000,
   };
@@ -40,7 +37,7 @@ const TrainerSelector: React.FC<Props> = ({ arrayOfTrainers }) => {
   const selectStyle: React.CSSProperties = {
     padding: "8px 12px",
     borderRadius: 6,
-    border: "1px solid #ccc",
+    border: "1px solid #5c5c5cff",
     background: "white",
   };
 
