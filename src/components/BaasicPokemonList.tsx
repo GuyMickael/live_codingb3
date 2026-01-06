@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import type { IPokemonData } from "../types/pokemon.type";
 
 export default function BaasicPokemonList() {
@@ -20,7 +20,7 @@ export default function BaasicPokemonList() {
     return () => {
       mounted = false;
     };
-  }, []); // empty deps -> runs once on mount
+  }, []);
 
   return (
     <div>
